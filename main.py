@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from flask import Flask, url_for, render_template, request, redirect, session
 import dbHelper
+#upload folder is used to store images that were uploaded from the website.
 UPLOAD_FOLDER = 'static/img/upload_img/'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
@@ -8,10 +9,11 @@ app = Flask(import_name=__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+#this is the remember me cookie
 @app.before_request
 def make_session_permanent():
     session.permanent = True
-
+#It renders the index page
 @app.route("/", methods=['GET', 'POST'])
 def home():
     err = ''
