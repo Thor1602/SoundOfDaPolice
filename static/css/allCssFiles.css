@@ -1,0 +1,16 @@
+.img-fluid {
+  width: 1000px;
+  max-width: 100%;
+  height: auto;
+}
+h1{
+  color: #3600FF;
+}
+.slow-spin {
+  -webkit-animation: fa-spin 6s infinite linear;
+  animation: fa-spin 12s infinite linear;
+}
+.fast-spin {
+  -webkit-animation: fa-spin 6s infinite linear;
+  animation: fa-spin 1s infinite linear;
+}
